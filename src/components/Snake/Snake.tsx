@@ -122,7 +122,7 @@ const Snake = () => {
     }
   }
 
-  let changeView = () => {
+  let changeView = (): void => {
     let intViewportHeight = window.innerHeight;
     window.scrollBy(0, intViewportHeight);
     document.body.style.overflow = "visible";
