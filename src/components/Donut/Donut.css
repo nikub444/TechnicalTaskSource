@@ -1,0 +1,38 @@
+.wrapper-donut {
+  width: 600px;
+  height: 600px;
+  margin: 15px;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  padding: 25px;
+}
+
+.wap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.wap p {
+  height: auto;
+  width: 50vw;
+  display: block;
+  margin: 50px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 1380px) {
+  .wap {
+    justify-content: center;
+  }
+  .wap p {
+    width: 80%;
+  }
+}
