@@ -61,11 +61,11 @@
 }
 .icon_7 {
   animation: slide 4s ease-in-out infinite;
-  animation-delay: 7.1s;
+  animation-delay: 7.6s;
 }
 .icon_8 {
   animation: slide 4s ease-in-out infinite;
-  animation-delay: 8.3s;
+  animation-delay: 8.7s;
 }
 @keyframes slide {
   0% {
@@ -220,6 +220,6 @@
   }
 }
 .sky h1 {
-  margin-top: 20vh;
+  margin-top: 5vh;
   text-align: center;
 }

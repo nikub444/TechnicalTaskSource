@@ -15,6 +15,7 @@
     "@types/node": "^12.20.19",
     "@types/react": "^17.0.16",
     "@types/react-dom": "^17.0.9",
+    "aos": "^2.3.4",
     "chart.js": "^3.5.0",
     "d3": "^7.0.0",
     "dotenv": "^10.0.0",
@@ -57,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/d3": "^7.0.0",
     "@types/react-plotly.js": "^2.5.0"
   }

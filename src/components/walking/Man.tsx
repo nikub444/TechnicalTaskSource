@@ -37,6 +37,16 @@ const Man = () => {
       id: 6,
       title: "Python logo",
     },
+    {
+      src: "https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png",
+      id: 7,
+      title: "Jest",
+    },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+      id: 8,
+      title: "GraphQL",
+    },
   ];
   return (
     <div className="sky">

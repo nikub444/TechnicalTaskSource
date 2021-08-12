@@ -217,22 +217,6 @@ button#activate:hover {
   box-sizing: border-box;
 }
 
-.text {
-  position: absolute;
-  margin-top: 55vmin;
-  color: white;
-  font-family: Arial, Helvetica, serif;
-  font-size: 5vmin;
-  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
-  perspective-origin: left;
-  background: #000000;
-  padding: 1vmin;
-  transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg)
-    rotate3d(1, 0, 0, 90deg) translate(33.5vmin, -2vmin);
-  text-align: center;
-  width: 49vmin;
-}
-
 .fac {
   text-decoration: none;
   color: white;
@@ -271,9 +255,10 @@ button#activate:hover {
   perspective-origin: left;
   background: #000000;
   padding: 2vmin;
+  padding-top: 3vmin;
   border-radius: 2vmin;
-  transform: rotateX(-35deg) rotateY(30deg) rotateZ(11deg)
-    rotate3d(1, 0, 0, 85deg) translate(27.5vmin, -14vmin);
+  transform: rotateX(-28deg) rotateY(27deg) rotateZ(5deg)
+    rotate3d(1, 0, 0, 90deg) translate(27.5vmin, -18vmin);
   text-align: center;
   width: 49vmin;
 }

@@ -1,5 +1,7 @@
 import "./Chart.css";
 import Plot from "react-plotly.js";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import { useEffect, useState } from "react";
 
@@ -7,12 +9,12 @@ const Chart = () => {
   const [X, setX] = useState([]);
   const [Y, setY] = useState([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [symbol, setSymbol] = useState("IBM");
+  const [symbol, setSymbol] = useState<string>("IBM");
   let stockX: any = [];
   let stockY: any = [];
-  const API_KEY = "8VGREADYSKK21WEN";
-  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=${API_KEY}`;
-  const ApiCall = async () => {
+  const API_KEY: string = "8VGREADYSKK21WEN";
+  const url: string = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=${API_KEY}`;
+  const ApiCall = async (): Promise<void> => {
     try {
       setLoading(true);
       const data = await (await fetch(url)).json();
@@ -22,6 +24,8 @@ const Chart = () => {
         stockY.push(data["Time Series (Daily)"][key]["1. open"]);
       }
       // console.log(stockY);
+      console.log(stockY);
+      console.log(stockX);
       setX(stockX);
       setY(stockY);
       setLoading(false);
@@ -60,27 +64,31 @@ const Chart = () => {
     //   });
     // setLoading(false);
   }, [symbol]);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   return (
     <div className="wrapp">
-      <p>
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur?"
+      <p data-aos="fade-right">
+        Four years ago when I started studing technical physics I realised that
+        statistical mathematics is "my thing". After a year I changed my degree
+        from physics to computer science and econometrics at the same
+        university. I wanted to build more advanced trading bots on a stock
+        market and that was my first coding experience. My university degree lay
+        emphasis on data science which is my second scope of interest. I like to
+        learn statistical mathematics and know how to use it to analyze data. In
+        a near future I want to build website about stock analysis that is using
+        machine learning solutions and data science tricks which will help me
+        write my bachelors diploma about Theoretical and Practical aspects of
+        Algorithmic Trading.
       </p>
-      <label>Choose a company to display stock prices!:</label>
+      <label data-aos="zoom-in">
+        Choose a company to display stock prices!:
+      </label>
 
       <select
+        data-aos="zoom-in"
         onChange={(e) => {
           const selectedSymbol = e.target.value;
           setSymbol(selectedSymbol);

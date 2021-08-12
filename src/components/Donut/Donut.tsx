@@ -46,25 +46,27 @@ const data: StockData = {
 
 const Donut = () => (
   <>
-    <h1 className="title">My Scope of Interest </h1>
+    <h1 className="title" data-aos="fade-down">
+      My Scope of Interest{" "}
+    </h1>
     <div className="wap">
       <div className="wrapper-donut">
         <Pie data={data} />
       </div>
-      <p>
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur?"
+      <p data-aos="fade-left">
+        Hi! I am react/fullstack developer with almost one year commercial
+        experience as a javascript developer. I like to learn everything that is
+        connected to IT industry! I am student of a third year at AGH university
+        of science and technology at the faculty of computer science and
+        econometrics. I wrote my first program 4 years ago in C that was used
+        for algo trading. I wanted to show my program to the world so I started
+        to build my own blog about algorithmic trading on wordpress. Immediately
+        I realised I want to become professional web developer in a future! I
+        continously develop my portfolio and mainly focus on MERN stack, but
+        also I know basics of Angular.js, Vue.js, Python and C#. Currently I am
+        mastering Typescript and how to integrate it with React, Node.js and
+        GraphQL. I am eager to learn new technologies and improve my skills in
+        front-end/back-end.
       </p>
     </div>
   </>
