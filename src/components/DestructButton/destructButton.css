@@ -4,11 +4,11 @@
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background: url(../../images/bomb1.jpg);
+  background: url(../../images/machine3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* 
 .base {
   background: #cacaca;
   width: 20vmin;
@@ -42,8 +42,43 @@ button#activate:hover {
   box-shadow: 0 3vmin 0.15vmin 0vmin #910000, 0 1vmin 0.15vmin 0vmin #af0000;
   top: -1.5vmin;
   transition: all 0.5s ease 0s;
+} */
+
+.base {
+  background: #cacaca;
+  width: 20vmin;
+  border-radius: 27vmin;
+  box-shadow: 0 6vmin 0.15vmin 0vmin rgb(150, 149, 149),
+    0 4vmin 0.15vmin 0vmin #777, 0 2vmin 0.15vmin 0vmin #777;
+  padding: 0vmin 2vmin 2vmin 2vmin;
+  z-index: 1;
+  transform: rotateX(65deg) rotateY(5deg) rotateZ(1deg);
+  margin-top: -4.5vmin;
+  margin-right: -2.5vmin;
+  height: 22vmin;
 }
 
+button#activate {
+  background: #3c6acf;
+  border: 0;
+  width: 20vmin;
+  height: 19vmin;
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  box-shadow: 0 4vmin 0.15vmin 0vmin #0243a5, 0 2vmin 0.15vmin 0vmin #0003af;
+  top: -2.5vmin;
+  border: 0.5vmin solid #012892a1;
+  transition: all 0.25s ease 0s;
+}
+
+button#activate:hover {
+  box-shadow: 0 3vmin 0.15vmin 0vmin #180197, 0 1vmin 0.15vmin 0vmin #180197;
+  top: -1.5vmin;
+  transition: all 0.5s ease 0s;
+}
 .modal {
   color: white;
   position: fixed;
@@ -67,9 +102,9 @@ button#activate:hover {
   animation-fill-mode: forwards;
 }
 @keyframes wobble2 {
-  25% {
+  30% {
     visibility: hidden;
-    background: #ffffff;
+    background: #1900ff;
   }
   50% {
     visibility: visible;
@@ -120,7 +155,7 @@ button#activate:hover {
   animation-name: wobble;
   animation-duration: 0.5s;
 }
-.warning {
+/* .warning {
   position: absolute;
   z-index: 0;
   width: 45vmin;
@@ -146,6 +181,38 @@ button#activate:hover {
   margin-top: 10%;
   margin-left: 10%;
   border: 1vmin solid rgb(251, 255, 0);
+  border-radius: 1vmin;
+  box-sizing: border-box;
+} */
+.warning {
+  position: absolute;
+  z-index: 0;
+  width: 45vmin;
+  height: 45vmin;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(0, 21, 66),
+    black 3vmin,
+    rgb(0, 153, 255) 3vmin,
+    rgb(96, 106, 122) 6vmin
+  );
+  transform: rotateX(-28deg) rotateY(27deg) rotateZ(5deg)
+    rotate3d(1, 0, 0, 90deg);
+  /* transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg)
+    rotate3d(1, 0, 0, 90deg); */
+  border-radius: 3px;
+  box-shadow: 0 0 0 7vmin #000000;
+}
+
+.warning:before {
+  content: "";
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(45deg, #000000 0%, #414141 74%);
+  float: left;
+  margin-top: 10%;
+  margin-left: 10%;
+  border: 1vmin solid rgb(255, 255, 255);
   border-radius: 1vmin;
   box-sizing: border-box;
 }
@@ -192,4 +259,21 @@ button#activate:hover {
 
 .modal h1 {
   margin: 30px;
+}
+
+.text {
+  position: absolute;
+  margin-top: 55vmin;
+  color: white;
+  font-family: Arial, Helvetica, serif;
+  font-size: 6vmin;
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+  perspective-origin: left;
+  background: #000000;
+  padding: 2vmin;
+  border-radius: 2vmin;
+  transform: rotateX(-35deg) rotateY(30deg) rotateZ(11deg)
+    rotate3d(1, 0, 0, 85deg) translate(27.5vmin, -14vmin);
+  text-align: center;
+  width: 49vmin;
 }

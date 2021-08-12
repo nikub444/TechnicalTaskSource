@@ -16,6 +16,7 @@ const Chart = () => {
     try {
       setLoading(true);
       const data = await (await fetch(url)).json();
+      console.log(data);
       for (let key in data["Time Series (Daily)"]) {
         stockX.push(key);
         stockY.push(data["Time Series (Daily)"][key]["1. open"]);
@@ -59,9 +60,6 @@ const Chart = () => {
     //   });
     // setLoading(false);
   }, [symbol]);
-  useEffect(() => {
-    console.log("loading", loading);
-  }, [loading]);
 
   return (
     <div className="wrapp">
@@ -108,7 +106,7 @@ const Chart = () => {
           layout={{
             width: 600,
             height: 400,
-            title: `Stock value of ${symbol}`,
+            title: `Stock value of ${symbol} in dollars`,
           }}
         />
       </div>

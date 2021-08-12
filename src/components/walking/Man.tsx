@@ -1,7 +1,12 @@
 import "../walking/Man.styling.css";
+type icon = {
+  src: string;
+  id: number;
+  title: string;
+};
 
 const Man = () => {
-  let icons = [
+  let icons: icon[] = [
     {
       src: "https://img.icons8.com/plasticine/100/000000/react.png",
       id: 2,

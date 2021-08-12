@@ -95,10 +95,16 @@ body {
     opacity: 1;
   }
 }
-
+.funButton:hover {
+  opacity: 0.9;
+  background: #322361;
+}
+.playButton:hover {
+  opacity: 0.9;
+  background: #322361;
+}
 .arrowModal {
   position: absolute;
-  opacity: 0;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -107,23 +113,26 @@ body {
   border: 2px solid white;
   padding: 10px;
   font-size: 0.9em;
-  color: white;
   box-shadow: 4px 4px 0px 0px white;
   font-family: "Press Start 2P", cursive;
   font-weight: 700;
   letter-spacing: 5px;
   text-transform: uppercase;
-  z-index: 23;
-  animation: modal ease 4s;
+  z-index: 20;
+  animation: modal ease 12s;
+  animation-fill-mode: forwards;
 }
 @keyframes modal {
   0% {
-    top: 0%;
-    visibility: visible;
+    top: 5%;
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 1;
   }
   100% {
-    top: 10%;
-    visibility: hidden;
+    top: 15%;
+    opacity: 0;
   }
 }
 
@@ -151,7 +160,7 @@ h2 {
   background: url(../../images/arcade.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
+  overflow: hidden;
   z-index: 1;
 }
 

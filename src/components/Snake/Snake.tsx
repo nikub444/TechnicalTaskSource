@@ -21,6 +21,7 @@ const Snake = () => {
   const [newScoreClass, setNewScoreClass] = useState<string>("");
   const [modalClass, setModalClass] = useState<string>("");
   const [hideClass, setHideClass] = useState<string>("");
+  const [funClass, setFunClass] = useState<string>("");
   const [snake, setSnake] = useState(initialSnake);
   const [apple, setApple] = useState(initialApple);
   const [direction, setDirection] = useState<number[]>([0, -1]);
@@ -50,6 +51,8 @@ const Snake = () => {
   function play(): void {
     setHideClass("unhide");
     setModalClass("arrowModal");
+
+    setFunClass("funButton unhide");
     executeScroll();
     document.body.style.overflow = "hidden";
     setSnake(initialSnake);
@@ -137,7 +140,9 @@ const Snake = () => {
 
   return (
     <div onKeyDown={(e) => changeDirection(e)} className="wrap" ref={myRef}>
-      <div className={`hid ${modalClass}`}>Use arrows to play!</div>
+      <div className={`hid  ${hideClass} ${modalClass}`}>
+        Use arrows to play!
+      </div>
       <div className={`hid ${hideClass}`}>
         <img id="fruit" src={Apple} alt="fruit" width="30" />
         <img src={GameBoy} alt="gameboy" className="gameboy" />
@@ -158,7 +163,7 @@ const Snake = () => {
       <button onClick={play} className="playButton">
         Play
       </button>
-      <button className="funButton" onClick={changeView}>
+      <button className={`hid ${funClass}`} onClick={changeView}>
         Let's explore World!
         <img src={ArrowIcon} alt="arrow icon" style={{ height: 15 }} />
       </button>

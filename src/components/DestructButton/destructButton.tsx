@@ -7,7 +7,6 @@ const DestructButton = () => {
   const [destruct, setDestruct] = useState<Number>(0);
   return (
     <div className="wrapper">
-      {/* <div className="modalW" datatype={`${destruct}`}></div> */}
       <div className="modal" datatype={`${destruct}`}>
         <h1>Find me on:</h1>
         <div>
@@ -65,7 +64,7 @@ const DestructButton = () => {
           <span></span>
         </button>
       </div>
-      {destruct}
+      <div className="text">DON'T TOUCH</div>
     </div>
   );
 };
